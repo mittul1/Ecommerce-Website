@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Cart
+</h1>
+{% for item in items %}
+<div class="aaa">
+<p class="item_name">Name: {{ item.name }}</p>
+<p class="item_price">Price:£ {{ item.price }}</p>
+<p class="item_description">: {{ item.description }}</p>
+
+<img   src="{{ url_for('static', filename='img/' + item.image_file) }}">
+<br>
+<br>
+<br>
+<a class="qqq"  href="/remove_from_cart/{{ item.id }}"><input type="button" value="Remove from Cart" /></a>
+<br>
+</div>
+{% endfor %}
+{% endblock content %}

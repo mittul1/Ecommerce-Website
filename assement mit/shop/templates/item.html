@@ -1,0 +1,8 @@
+{% extends "layout.html" %}
+{% block content %}
+<img src="{{ url_for('static', filename='img/' + item.image_file) }}">
+<p>"{{ item.name }}" </p>
+<p>£{{ item.price }}</p>
+<p>{{ item.description}}</p>
+</form>
+{% endblock content %}
